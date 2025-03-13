@@ -1,4 +1,5 @@
-clone this repo on local machine, to reduce size i have clean the solution
+clone this repo on local machine, to reduce size i have cleaned the solution and removed the binaries
+
 Solution structure
   - src
         - Dunnhumby.Products
