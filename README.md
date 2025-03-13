@@ -1,6 +1,18 @@
 clone this repo on local machine, to reduce size i have clean the solution
 Solution structure
   - src
-  - 
+        - Dunnhumby.Products
+          - Dockerfile
+        - Dunnhumby.Products.Test
+  - sln
+  - docker compose
+
 Prequisite - docker for desktop or any docker hub cli access
 go to docker-compose file location in power shell terminal and run below command 
+    docker-compose up -d --build
+    
+once containers are up and running, visit below url to see all api documentation and information
+http://localhost:8080/swagger/index.html
+
+as the env is still development we can utilise swagger ui for getting list of all apis
+    
