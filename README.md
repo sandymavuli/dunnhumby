@@ -17,4 +17,9 @@ once containers are up and running, visit below url to see all api documentation
 http://localhost:8080/swagger/index.html
 
 as the env is still development we can utilise swagger ui for getting list of all apis
+
+**Troubleshooting**
+1. Go to SQL SSMS and try to connect to server - **localhost,1433**
+   user name - **sa**
+   password - **Mavuli@123**
     
