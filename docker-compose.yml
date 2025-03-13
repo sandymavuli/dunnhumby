@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+  dunnhumby.products:
+    image: ${DOCKER_REGISTRY-}dunnhumbyproducts
+    build:
+      context: src/Dunnhumby.Products
+      dockerfile: Dockerfile
+    depends_on:
+      - sql-server
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=sql-server,1433;Database=ProductDb;User Id=sa;Password=Mavuli@123;TrustServerCertificate=True;
+      - DB_HOST=Mavuli_Laptop\SQLEXPRESS
+      - DB_NAME=ProductDb
+      - DB_SA_PASSWORD=Mavuli@123
+    networks:
+      - app-network
+
+
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql-express
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Mavuli@123
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+    volumes:
+      - sql-data:/var/opt/mssql
+
+networks:
+  app-network:
+    driver: bridge
+ 
+volumes:
+  sql-data:
+    driver: local

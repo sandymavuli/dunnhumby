@@ -1,0 +1,6 @@
+@Dunnhumby.Products_HostAddress = http://localhost:5267
+
+GET {{Dunnhumby.Products_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
