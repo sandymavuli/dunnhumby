@@ -22,4 +22,7 @@ as the env is still development we can utilise swagger ui for getting list of al
 1. Go to SQL SSMS and try to connect to server - **localhost,1433**
    user name - **sa**
    password - **Mavuli@123**
+
+2. Go to docker for desktop and check container are created and running successfully.
+3. There should be two services **dunnhumby.products** and **sql-server** or **sql-express** - container name should be up and running.
     
