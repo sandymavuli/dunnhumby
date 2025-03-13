@@ -10,7 +10,8 @@ Solution structure
 
 Prequisite - docker for desktop or any docker hub cli access
 go to docker-compose file location in power shell terminal and run below command 
-    docker-compose up -d --build
+   
+**docker-compose up -d --build**
     
 once containers are up and running, visit below url to see all api documentation and information
 http://localhost:8080/swagger/index.html
